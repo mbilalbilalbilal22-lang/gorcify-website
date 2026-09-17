@@ -7,7 +7,11 @@ const Products = () => {
     const categories = ['All', 'Fruits', 'Vegetables', 'Dairy', 'Sea Foods']
     const [activeTab, setActiveTab] = useState('All')
 
-    const renderCards = ProductList.slice(0, 8).map(products => {
+    // filter items starts
+    let filteredItems = activeTab === 'All' ? ProductList : ProductList.filter(item => item.category === activeTab);
+    // filter items ends
+
+    const renderCards = filteredItems.slice(0, 8).map(products => {
         return (
             <Cards key={products.id} image={products.image} name={products.name} price={products.price} category={products.category} />
         )
@@ -15,11 +19,11 @@ const Products = () => {
 
     return (
         <section>
-            <div className="max-w-[1150px] mx-auto px-10">
+            <div className="max-w-[1150px] mx-auto px-10 pb-10">
                 <Heading highlight="Our" heading="Products" />
 
                 {/* Tabs start */}
-                <div className='flex gap-3 justify-center'>
+                <div className='flex flex-wrap gap-3 justify-center'>
                     {categories.map(category => {
                         return (
                             <button key={category}
@@ -34,10 +38,16 @@ const Products = () => {
                 {/* Tabs end*/}
 
                 {/* Product Listing start */}
-                <div className='grid grid-cols-4 gap-9 mt-10'>
+                <div className='grid grid-cols-1 md:grid-cols-4 gap-9 mt-10'>
                     {renderCards}
                 </div>
                 {/* Product Listing end */}
+
+                {/* view all button start */}
+                <div className='mx-auto mt-15 w-fit'>
+                    <button className='bg-gradient-to-b from-orange-400 to-orange-500 text-white text-lg px-4 py-3 rounded-lg'>View All</button>
+                </div>
+                {/* view all button end */}
             </div>
         </section>
     )
