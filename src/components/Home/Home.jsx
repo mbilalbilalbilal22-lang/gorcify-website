@@ -5,6 +5,10 @@ import Category from '../Category/Category';
 import Values from '../Values/Values';
 import Products from '../Products/Products';
 import Discount from '../Discount/Discount';
+import Process from '../Process/Process';
+import Testimonials from '../testimonials/testimonials';
+import Footer from '../Footer/Footer';
+
 const Home = () => {
   return (
     <div>
@@ -14,6 +18,9 @@ const Home = () => {
       <Values />
       <Products />
       <Discount />
+      <Process />
+      <Testimonials />
+      <Footer />
     </div>
   )
 }
