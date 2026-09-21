@@ -39,17 +39,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <a href="#" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
+            <Link to="/aboutus" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
+            <a href="/processPage" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
               Process
             </a>
           </li>
           <li>
-            <a href="#" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
+            <a href="/contactus" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
               Contact Us
             </a>
           </li>
