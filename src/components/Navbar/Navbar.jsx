@@ -4,6 +4,7 @@ import { GoHeartFill } from 'react-icons/go'
 import { RiShoppingBag4Fill } from 'react-icons/ri' // Note: Make sure 'ri' is from 'react-icons/ri'
 import { TbMenu2 } from 'react-icons/tb'
 import { ImCross } from 'react-icons/im'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -26,16 +27,16 @@ const Navbar = () => {
     <header className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled ? 'shadow-lg' : ''}`}>
       <nav className="max-w-[1150px] h-[12vh] md:h-[14vh] px-10 mx-auto flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="text-3xl font-bold">
+        <Link to="/" className="text-3xl font-bold">
           Gr<span className="text-orange-500 uppercase">o</span>cify
-        </a>
+        </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-x-15">
           <li>
-            <a href="#" className="font-semibold tracking-wider text-orange-500">
+            <Link to="/" className="font-semibold tracking-wider text-orange-500">
               Home
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#" className="font-semibold tracking-wider text-zinc-800 hover:text-orange-500">
@@ -80,7 +81,7 @@ const Navbar = () => {
           <a href="#" className="text-zinc-800 text-2xl">
             <RiShoppingBag4Fill />
           </a>
-          
+
           {/* Hamburger Icon */}
           <a href="#" className="text-zinc-800 text-3xl md:hidden" onClick={toggleMenu}>
             {showMenu ? <ImCross /> : <TbMenu2 />}
@@ -123,7 +124,7 @@ const Navbar = () => {
             </button>
           </li>
         </ul>
-        
+
       </nav>
     </header>
   )

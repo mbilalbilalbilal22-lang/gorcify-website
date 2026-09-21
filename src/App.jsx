@@ -1,9 +1,14 @@
 import React from "react";
-import Home from './components/Home/Home';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AppRouter from "./router/AppRouter";
 const App = () => {
-    return(
+    return (
         <div>
-            <Home />
+            <BrowserRouter>
+                <AppRouter />
+            </BrowserRouter>
+            {/* <Home /> */}
         </div>
     )
 }
